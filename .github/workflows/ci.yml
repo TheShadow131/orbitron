@@ -1,0 +1,38 @@
+name: CI - Quality Checks
+
+on:
+  push:
+    branches: [main, master, "release/**"]
+  pull_request:
+    branches: [main, master, "release/**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run Ruff and Mypy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v9.0.0
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      - name: Ruff lint
+        run: uv run ruff check .
+
+      - name: Mypy
+        run: uv run mypy .

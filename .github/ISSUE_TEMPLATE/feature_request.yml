@@ -1,0 +1,152 @@
+name: Feature request
+description: Suggest a new feature or improvement for the project.
+title: "[FEATURE] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a feature.
+        Keep this issue actionable: clear description, concrete proposal, and measurable acceptance criteria.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Brief description
+      description: Short description of the requested feature (1-2 lines).
+      placeholder: Add support for ... because ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem does this feature solve?
+      placeholder: Current behavior and limitations.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should the feature work?
+      placeholder: High-level behavior, implementation ideas, and expected output.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area/component
+      description: Which area of the project is primarily impacted?
+      options:
+        - Not specified
+        - CLI
+        - API
+        - Core logic
+        - Documentation
+        - CI/CD
+        - Packaging
+        - Developer experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: What is explicitly out of scope for this feature?
+      placeholder: |
+        - Not changing ...
+        - Not including ...
+        - N/A
+
+  - type: textarea
+    id: task_breakdown
+    attributes:
+      label: Task breakdown
+      description: Checklist to split this feature into concrete tasks and/or sub-issues.
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+        - [ ] Sub-issue: #123
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you considered.
+      placeholder: N/A
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: Define when this feature can be considered done.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Suggested priority value for GitHub issue fields.
+      options:
+        - Not specified
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort
+      description: Suggested effort value for GitHub issue fields.
+      options:
+        - Not specified
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Examples, use cases, or references.
+      placeholder: N/A
+
+  - type: textarea
+    id: completion_notes
+    attributes:
+      label: Completion notes
+      description: Optional closure notes summarizing the delivered feature.
+      placeholder: |
+        - Completion commit(s): <sha or PR>
+        - Scope delivered:
+        - Validation evidence:
+
+  - type: checkboxes
+    id: quality_checks
+    attributes:
+      label: Verification checklist
+      description: Mark items that apply before closing the issue.
+      options:
+        - label: Documentation has been updated (if applicable)
+        - label: Changes have been validated and work as expected
+        - label: Validation evidence was recorded (commands/results or rationale when not applicable)
+        - label: Acceptance criteria have been verified
+        - label: Related links/sub-issues were added (if applicable)
