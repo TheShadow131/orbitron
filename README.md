@@ -1,6 +1,6 @@
 # Orbitron
 
-Python project template with clear documentation, reproducible local setup using uv, and baseline quality checks with pre-commit, Ruff, and Mypy.
+Python project with clear documentation, reproducible local setup using uv, and baseline quality checks with pre-commit, Ruff, and Mypy.
 
 ## Table of contents
 
