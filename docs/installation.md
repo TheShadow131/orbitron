@@ -13,6 +13,7 @@ This guide explains how to prepare the environment and run the project locally.
 - [Getting started](#getting-started)
   - [Clone the repository](#clone-the-repository)
   - [Install dependencies with UV](#install-dependencies-with-uv)
+  - [Configuration](#configuration)
   - [Startup](#startup)
 
 ## Requirements
@@ -137,6 +138,14 @@ Verify the interpreter inside the virtual environment:
 
 ```bash
 uv run python --version
+```
+
+### Configuration
+
+Copy `.env.example` to `.env` locally:
+
+```bash
+cp .env.example .env
 ```
 
 ### Startup

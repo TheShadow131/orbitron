@@ -22,4 +22,4 @@ class DBConnectionNotFoundError(DBServiceError):
 
 
 class DBConnectionUnhealthyError(DBServiceError):
-    """Exception raised when a database connection health check fails."""
+    """Exception raised when a database connection fails a health check."""
