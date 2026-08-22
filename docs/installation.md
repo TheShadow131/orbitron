@@ -13,7 +13,6 @@ This guide explains how to prepare the environment and run the project locally.
 - [Getting started](#getting-started)
   - [Clone the repository](#clone-the-repository)
   - [Install dependencies with UV](#install-dependencies-with-uv)
-  - [Configuration](#configuration)
   - [Startup](#startup)
 
 ## Requirements
@@ -107,13 +106,9 @@ uv --version
 
 ### Clone the repository
 
-<!-- Template note (post-clone):
-Action: Replace the repository URL and project directory name with your own values.
--->
-
 ```bash
-git clone https://github.com/TheShadow131/python_template.git
-cd python_template
+git clone https://github.com/TheShadow131/orbitron.git
+cd orbitron
 ```
 
 ### Install dependencies with UV
@@ -142,20 +137,6 @@ Verify the interpreter inside the virtual environment:
 
 ```bash
 uv run python --version
-```
-
-### Configuration
-
-<!-- Template note (post-clone):
-Action: Remove this section if your project does not use environment variables.
-Action: If you keep this section, document required variables and their purpose.
-Action: Add an `.env.example` file without secrets.
--->
-
-If your project includes `.env.example`, copy it locally:
-
-```bash
-cp .env.example .env
 ```
 
 ### Startup

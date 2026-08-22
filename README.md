@@ -1,8 +1,4 @@
-# Python template
-
-<!-- Template note (post-clone):
-Action: Replace this title and short description with your project-specific information.
--->
+# Orbitron
 
 Python project template with clear documentation, reproducible local setup using uv, and baseline quality checks with pre-commit, Ruff, and Mypy.
 
@@ -12,7 +8,6 @@ Python project template with clear documentation, reproducible local setup using
   - [Recommended reading order](#recommended-reading-order)
   - [Documentation index](#documentation-index)
   - [AI instructions index](#ai-instructions-index)
-- [Post-clone customization checklist](#post-clone-customization-checklist)
 
 ## Documentation
 
@@ -57,14 +52,3 @@ This section is focused on AI coding assistants and agent workflows used in this
 - [Documentation Instructions](.github/instructions/docs.instructions.md): path-specific rules for `docs/**/*.md` and `README.md`.
 - [GitHub Instructions](.github/instructions/github.instructions.md): path-specific rules for files under `.github/` (templates, workflows, and repository metadata).
 - [Python Instructions](.github/instructions/python.instructions.md): path-specific rules for Python source files under `app/`.
-
-## Post-clone customization checklist
-
-<!-- Template note (post-clone):
-Action: Remove this checklist after completing the customization steps.
--->
-
-1. Change `name`, `description`, `requires-python`, and other necessary metadata in the `pyproject.toml` file.
-2. Review every hidden comment marked as `Template note (post-clone)` across the documentation, including this README, and follow the indicated action in each one.
-3. Remove `Post-clone customization checklist` from the table of contents after finishing the post-clone actions.
-4. Remove this `Post-clone customization checklist` section from the README and delete all remaining hidden comments marked as `Template note (post-clone)`.
