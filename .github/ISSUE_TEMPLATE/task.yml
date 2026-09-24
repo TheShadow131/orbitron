@@ -1,0 +1,118 @@
+name: Task
+description: Create a task to track concrete work items.
+title: "[TASK] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for creating a task.
+        Please keep this issue concrete, actionable, and easy to close.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Brief description
+      description: One-line summary of the task.
+      placeholder: Update the documentation for ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What should be achieved by this task?
+      placeholder: Make the current flow clearer and easier to maintain.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area/component
+      description: Which area of the project is primarily impacted?
+      options:
+        - Not specified
+        - CLI
+        - API
+        - Core logic
+        - Documentation
+        - CI/CD
+        - Packaging
+        - Developer experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_breakdown
+    attributes:
+      label: Task breakdown
+      description: Checklist to split this task into concrete steps and/or sub-issues.
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+        - [ ] Sub-issue: #123
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: Define when this task can be considered done.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Suggested priority for GitHub issue triage.
+      options:
+        - Not specified
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort
+      description: Suggested effort estimate for this task.
+      options:
+        - Not specified
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion_notes
+    attributes:
+      label: Completion notes
+      description: Optional closure notes summarizing what was delivered.
+      placeholder: |
+        - Completion commit(s): <sha or PR>
+        - Key validation evidence:
+        - Follow-up items (if any):
+
+  - type: checkboxes
+    id: verification_checklist
+    attributes:
+      label: Verification checklist
+      description: Mark the items that were checked before closing.
+      options:
+        - label: Changes have been validated and work as expected (if applicable)
+        - label: Validation evidence was recorded (commands/results or rationale when not applicable)
+        - label: Acceptance criteria were reviewed
+        - label: Documentation has been updated (if applicable)
+        - label: Related links/sub-issues were added (if applicable)
