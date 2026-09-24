@@ -1,0 +1,150 @@
+name: Bug report
+description: Report a bug with reproducible steps, impact, and clear resolution criteria.
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+        Please provide enough context to reproduce, assess impact, and validate the fix.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Brief description
+      description: One-line summary of the bug.
+      placeholder: Commands fail when ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the minimum steps to reproduce the issue.
+      placeholder: |
+        1. Do this
+        2. Do that
+        3. Observe the bug
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area/component
+      description: Which area of the project is impacted?
+      options:
+        - Not specified
+        - CLI
+        - API
+        - Core logic
+        - Documentation
+        - CI/CD
+        - Packaging
+        - Developer experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: What is explicitly out of scope for this fix?
+      placeholder: |
+        - Not changing ...
+        - Not adding ...
+        - N/A
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: The command should ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+      placeholder: The app returned ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix_plan
+    attributes:
+      label: Proposed fix plan
+      description: List the main steps you expect for the fix.
+      placeholder: |
+        1. Reproduce the bug reliably
+        2. Implement the fix
+        3. Validate no regressions
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, and relevant dependency versions.
+      placeholder: Ubuntu 24.04, Python 3.13, package x.y.z
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Suggested priority for GitHub issue triage.
+      options:
+        - Not specified
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: Define when this bug can be considered resolved.
+      placeholder: |
+        - [ ] Reproduction steps no longer fail
+        - [ ] Expected behavior is restored
+        - [ ] No regressions observed
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional information
+      description: Logs, stack traces, screenshots, or related links.
+      placeholder: Paste logs or attach files.
+
+  - type: textarea
+    id: completion_notes
+    attributes:
+      label: Completion notes
+      description: Optional closure notes summarizing the implemented fix.
+      placeholder: |
+        - Completion commit(s): <sha or PR>
+        - Root cause summary:
+        - Validation and regression evidence:
+
+  - type: checkboxes
+    id: verification_checklist
+    attributes:
+      label: Verification checklist
+      description: Mark the items that were checked before closing.
+      options:
+        - label: Fix has been validated
+        - label: Validation evidence was recorded (commands/results or rationale when not applicable)
+        - label: Acceptance criteria were reviewed
+        - label: Relevant documentation was updated (if applicable)
+        - label: Regression checks were completed
