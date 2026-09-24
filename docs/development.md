@@ -40,7 +40,7 @@ uv run pre-commit run --all-files
 ## Local validations
 
 Run these checks before opening a pull request.
-These are the same checks executed in CI for the current phase (Ruff and Mypy only):
+The Ruff and Mypy commands below are the same checks executed in CI; pre-commit also runs repository-hygiene hooks:
 
 ```bash
 uv run pre-commit run --all-files
