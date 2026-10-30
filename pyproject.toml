@@ -1,0 +1,24 @@
+[project]
+name = "orbitron"
+version = "0.1.0"
+description = "A modular Discord bot written in Python."
+readme = "README.md"
+authors = [
+    { name = "TheShadow131", email = "github.spiffy079@passinbox.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "discord-py>=2.7.1",
+    "python-dotenv>=1.2.4",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
