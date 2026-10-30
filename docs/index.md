@@ -4,7 +4,7 @@ Welcome to the official documentation for Orbitron, a modular Discord bot built 
 
 ## Index
 
-<!-- 
+<!--
 Guidelines for adding new entries to the index:
 
 Format:

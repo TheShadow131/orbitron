@@ -100,7 +100,7 @@ Follow these guidelines when creating pull requests for the Orbitron project:
 Orbitron follows a consistent code formatting style to maintain readability and code quality. Adhere to the following guidelines when formatting your code:
 
 - Use 4 spaces for indentation.
-- Limit lines to 80 characters.
+- Limit lines to 88 characters.
 - Use snake_case for variable and function names.
 - Use PascalCase for class names.
 - Place imports at the top of the file, grouped by standard library, third-party, and local imports.
