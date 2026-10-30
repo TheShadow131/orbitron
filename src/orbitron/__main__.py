@@ -1,3 +1,9 @@
+"""
+Main module for the Orbitron Discord bot.
+
+Contains the entry point and main logic for executing the Orbitron Discord bot.
+"""
+
 from logging import getLogger
 from os import getenv
 
@@ -15,8 +21,8 @@ logger = getLogger(__package__)
 
 
 @bot.event
-async def on_ready():
-    """Envent triggered when the bot is ready."""
+async def on_ready() -> None:
+    """Event triggered when the bot is ready."""
     logger.info(f"Logged in as {bot.user}")
 
     await bot.tree.sync()
@@ -25,7 +31,7 @@ async def on_ready():
 
 
 @bot.tree.command(name="ping", description="Check the bot's latency.")
-async def ping(interaction: Interaction):
+async def ping(interaction: Interaction) -> None:
     """
     Responds with the bot's latency.
 
@@ -41,8 +47,6 @@ if __name__ == "__main__":
     bot_token = getenv("DISCORD_TOKEN")
 
     if bot_token is None:
-        raise ValueError(
-            "DISCORD_TOKEN is not set in the environment variables."
-        )
+        raise ValueError("DISCORD_TOKEN is not set in the environment variables.")
 
     bot.run(bot_token, root_logger=True)
