@@ -1,4 +1,4 @@
-# Installation Guide
+# Installation Guide for Orbitron
 
 Welcome to the installation guide for Orbitron. This guide will walk you through the steps required to set up and install the Orbitron Discord bot on your system.
 
@@ -11,6 +11,7 @@ Welcome to the installation guide for Orbitron. This guide will walk you through
 - [Installation Steps (macOS/Linux)](#installation-steps-macoslinux)
     - [Main Installation Steps (macOS/Linux)](#main-installation-steps-macoslinux)
     - [Contribution Installation Steps (macOS/Linux)](#contribution-installation-steps-macoslinux)
+- [Development Commands](#development-commands)
 
 ## Requirements
 
@@ -150,3 +151,43 @@ This section will guide you to set up a development environment for contributing
 ```bash
 uv run pre-commit install
 ```
+
+## Development commands
+
+This section provides commonly used development commands for Orbitron.
+
+- Check code quality with Ruff:
+```bash
+uv run ruff check .
+```
+
+- Fix code quality with Ruff
+```bash
+uv run ruff check --fix .
+```
+
+- Check code format with ruff:
+```bash
+uv run ruff format --check .
+```
+
+- Fix code format with ruff:
+```bash
+uv run ruff format .
+```
+
+- Check code typing with mypy:
+```bash
+uv run mypy .
+```
+
+- Run all tests with pytest:
+```bash
+uv run pytest
+```
+
+- Run all pre-commit hooks:
+```bash
+uv run pre-commit run --all-files
+```
+
