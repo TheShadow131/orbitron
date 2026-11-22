@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+        entry: python -m pre_commit_hooks.check_yaml
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run --locked --no-sync python -m ruff check --fix
+        language: system
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run --locked --no-sync python -m ruff format
+        language: system
+        types_or: [python, pyi]
+      - id: mypy
+        name: mypy
+        entry: uv run --locked --no-sync python -m mypy src
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
