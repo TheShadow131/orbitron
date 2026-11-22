@@ -7,7 +7,9 @@ authors = [
     { name = "TheShadow131", email = "github.spiffy079@passinbox.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "discord-py>=2.7.1",
+]
 
 [dependency-groups]
 dev = [
