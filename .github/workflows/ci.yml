@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+
+jobs:
+    checks:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          python-version: [3.13, 3.14, 3.15]
+      steps:
+        - uses: actions/checkout@v4
+        - uses: astral-sh/setup-uv@v6
+        - name: Install dependencies
+          run: uv sync --locked --python ${{ matrix.python-version }}
+        - name: Ruff check
+          run: uv run --locked --no-sync ruff check .
+        - name: Ruff format
+          run: uv run --locked --no-sync ruff format --check .
+        - name: MyPy check
+          run: uv run --locked --no-sync mypy .

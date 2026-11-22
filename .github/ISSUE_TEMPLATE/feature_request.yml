@@ -1,0 +1,72 @@
+name: Feature request
+description: Suggest a feature or improvement for the project.
+title: "[Feature]: "
+labels: enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to suggest a feature or improvement. Please provide as much detail as possible to help us understand and evaluate your request.
+        This will help us prioritize and implement the feature effectively.
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature request
+      description: Describe the feature or improvement you are suggesting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Explain why this feature is important and what problem it solves.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Feature type
+      description: Select the type of feature you are requesting.
+      options:
+        - Feature
+        - Refactor
+        - Documentation
+        - CI & CD
+        - Testing
+        - Performance
+        - Accessibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation details
+      description: Describe how you would like this feature to be implemented.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional information
+      description: Provide any additional information or context for this feature request.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Please keep each feature focused on a single responsibility. If necessary, create a parent issue with related sub-issues, keeping each issue concise and manageable.
+
+  - type: textarea
+    id: sub-issues
+    attributes:
+      label: Sub-issues
+      description: List any related sub-issues or tasks for this feature request.
+    validations:
+      required: false
